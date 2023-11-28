@@ -1,3 +1,9 @@
 #!/usr/bin/python3
-for c in range(ord('z'), ord('a') - 1, -2):
-    print("{:c}{:s}".format(c, chr(c - 33)), end="")
+
+
+def remove_char_at(str, n):
+
+    if n >= 0:
+        return str[:n] + str[n+1:]
+    else:
+        return str
