@@ -1,27 +1,16 @@
 #!/usr/bin/python3
-"""
-This module conatins the function for strictly adding 2 numbers
-of data type int or floats together, any other data type is regarded
-as invalid with exceptions being raise signifying what caused the error.
-
-"""
+# 0-add_integer.py
+"""Defines an integer addition function."""
 
 
 def add_integer(a, b=98):
-    """This function returns the summation of 2 numbers of data type
-    int or float together
-
-    Args:
-        a: The first number
-        b: The second number
-
-    Return: a + b
+    """Return the integer addition of a and b.
+    Float arguments are typecasted to ints before addition is performed.
+    Raises:
+        TypeError: If either of a or b is a non-integer and non-float.
     """
-    data = (int, float)
-
-    if not isinstance(a, data):
+    if ((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
-    elif not isinstance(b, data):
+    if ((not isinstance(b, int) and not isinstance(b, float))):
         raise TypeError("b must be an integer")
-    else:
-        return int(a) + int(b)
+    return (int(a) + int(b))
