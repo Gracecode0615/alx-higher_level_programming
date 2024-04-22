@@ -1,2 +1,3 @@
 #!/usr/bin/node
-console.log(process.argv[2] + ' is ' + process.argv[3]);
+const num = Math.floor(Number(process.argv[2]));
+console.log(isNaN(num) ? 'Not a number' : `My number: ${num}`);
